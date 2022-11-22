@@ -1,0 +1,31 @@
+<a href="/">Add Record</a>
+<table border="1">
+    <tr>
+        <td>No</td>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Password</td>
+        <td>Gender</td>
+        <td>hobby</td>
+        <td>city</td>
+        <td>Description</td>
+        <td>Image</td>
+        <td>action</td>
+    </tr>
+    <% for(var s of record){  %>
+    <tr>
+        <td>No</td>
+        <td><%= s.name %></td>
+        <td><%= s.email %></td>
+        <td><%= s.password %></td>
+        <td><%= s.gender %></td>
+        <td><%= s.hobby %></td>
+        <td><%= s.city %></td>
+        <% var data = s.description %>
+        <td><%= data %></td>
+        <td><img src="<%= s.avatar %>" height="100"></td>
+        <td><a href="/post/deleteRecord/<%= s.id %>">Delete</a>
+        || <a href="/post/updateRecord/?stId=<%= s.id %>">Update</a></td>
+    </tr>
+    <% } %>
+</table>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is home page</h1>
+    <a href="/post/showData">view Record</a>
+<form method="post" action="/post/AddStudent"  enctype="multipart/form-data">
+    <table border="1">
+        <tr>
+            <td>Enter Name</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+
+        <tr>
+            <td>Enter Email</td>
+            <td><input type="text" name="email"></td>
+        </tr>
+
+        <tr>
+            <td>Enter Password</td>
+            <td><input type="password" name="password"></td>
+        </tr>
+
+        <tr>
+            <td>Select Gender</td>
+            <td><input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="female">Female</td>
+        </tr>
+
+        <tr>
+            <td>Select HObby</td>
+            <td><input type="checkbox" name="hobby[]" value="reading">Reading
+                <input type="checkbox" name="hobby[]" value="cycling">cycling
+                <input type="checkbox" name="hobby[]" value="music">Music
+            </td>
+        </tr>
+        <% var city = ["Surat","Rajkot","vadodara","Navasari","Ahmadabad"] %>
+        <tr>
+            <td>Select City</td>
+            <td>
+                <select name="city">
+                    <option value="">--select city--</option>
+                    <% for(var i=0; i<city.length; i++){%>
+                    <option value="<%= city[i] %>"><%= city[i] %></option>
+                    <% } %>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Description</td>
+            <td>
+                <textarea name="description" rows="5" cols="30"></textarea>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Upload file</td>
+            <td><input type="file" name="avatar"></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="Submit" name="submit" value="Register"></td>
+        </tr>
+        
+    </table>
+</form>
+<br><br><br>
+
+</body>
+</html>
