@@ -11,7 +11,7 @@ app.set('views',path.join(__dirname,'views'));
 
 app.use(express.urlencoded());
 app.use('/uploads', express.static(path.join(__dirname,'/uploads')));
-app.use('/',require('./routes'));
+
 
 app.listen(port,function(err){
     if(err){
