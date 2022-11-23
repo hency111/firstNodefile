@@ -7,7 +7,7 @@ const app = express();
 
 const path = require('path');
 
-mongoose.connect(process.env.DATABASE, {
+mongoose.connect("mongodb+srv://jaydeepCollege:jaydeep@123@cluster0.36fufoj.mongodb.net/college", {
     useNewUrlParser : true,
     useUnifiedTopology : true
 })
