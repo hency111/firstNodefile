@@ -1,6 +1,6 @@
 const monoogse = require('mongoose');
 
-monoogse.connect('mongodb://127.0.0.1/RNW8');
+monoogse.connect('mongodb+srv://jaydeepCollege:jaydeep@123@cluster0.36fufoj.mongodb.net/college');
 
 const db = monoogse.connection;
 
