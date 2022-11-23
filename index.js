@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-const { default: mongoose } = require('mongoose');
+const   mongoose = require('mongoose');
 
 const port =  process.env.PORT || 8081;
 const app = express();
@@ -8,7 +8,7 @@ const app = express();
 const path = require('path');
 
 mongoose.connect(process.env.DATABASE, {
-    userNewUrlParser : true,
+    useNewUrlParser : true,
     useUnifiedTopology : true
 })
 .then(() => {
